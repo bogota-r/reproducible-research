@@ -1,0 +1,13 @@
+---
+title: "Investigación reproducible con R"
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE, comment = "#>")
+```
+
+```{r intro, child = "intro.rmd"}
+```
+
+```{r knitr-rmd, child = "knitr-rmarkdown.rmd"}
+```

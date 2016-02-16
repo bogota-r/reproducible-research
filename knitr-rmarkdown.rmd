@@ -1,0 +1,7 @@
+# knitr & rmarkdown
+
+## Primero lo primero:
+
+```r
+install.packages(c("knitr", "rmarkdown"))
+```

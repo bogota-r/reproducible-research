@@ -1,0 +1,12 @@
+## _Outline_
+
+- Que es _reproducible research_ y para que?
+- Sobrevuelo historico
+- **knitr y rmarkdown**
+- Otras herramientas
+
+## Prueba
+
+```{r prueba}
+plot(sin, -pi, 2*pi)
+```

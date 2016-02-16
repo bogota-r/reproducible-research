@@ -1,8 +1,8 @@
 # Investigación reproducible con R
 
-Una breve presentación sobre investigación reproducible (_reproducible reaserch_) en [R](http://www.r-project.org/about.html) preparada para el [Grupo de Usuarios de R de Bogotá](http://www.meetup.com/Bogota-R-Users-Group/).
+Una breve presentación sobre investigación reproducible (_reproducible research_) en [R](http://www.r-project.org/about.html) preparada para el [Grupo de Usuarios de R de Bogotá](http://www.meetup.com/Bogota-R-Users-Group/).
 
-Pueden ver la presentación [acá](https://bogota-r.github.io/reproducible-reaserch).
+Pueden ver la presentación [acá](https://bogota-r.github.io/reproducible-research).
 
 ## Enlaces
 

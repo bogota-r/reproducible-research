@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="libs/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="libs/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="libs/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                favIcon: 'knitr-rmarkdown_files/logo.png',
+              },
+
+      // Author information
+      presenters: [
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+    slides > slide:not(.nobackground):before {
+      font-size: 12pt;
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      background: url(knitr-rmarkdown_files/logo.png) no-repeat 0 50%;
+      -webkit-background-size: 30px 30px;
+      -moz-background-size: 30px 30px;
+      -o-background-size: 30px 30px;
+      background-size: 30px 30px;
+      padding-left: 40px;
+      height: 30px;
+      line-height: 1.9;
+    }
+  </style>
+
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="knitr-rmarkdown_files/logo.png"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+          </hgroup>
+  </slide>
+
+<slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>rmarkdown</h2></hgroup><article  id="rmarkdown">
+
+</article></slide><slide class=''><hgroup><h2>¿Cómo se hacen reportes reproducibles en R?</h2></hgroup><article  id="como-se-hacen-reportes-reproducibles-en-r">
+
+<p>Knitr + markdown + pandoc = rmarkdown</p>
+
+<ul>
+<li>rmarkdown: Paquete de Rstudio</li>
+<li>Funciona con un click dentro del IDE Rstudio</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>¿Por qué usar markdown?</h2></hgroup><article  id="por-que-usar-markdown">
+
+<ul>
+<li>Fácil de aprender y usar.</li>
+<li>Mantener la atención en el contenido y no en lo estético.</li>
+<li>Flexible&#8230; inicialmente para HTML pero se puede convertir a diferentes formatos</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>¿Qué es markdown?</h2></hgroup><article  id="que-es-markdown">
+
+<ul>
+<li>Markup language: diseñados para producir contenidos con texto plano</li>
+<li>Ejemplo: Latex&#8230; markup language para crear pdf&#39;s</li>
+<li>Convertir a varios formatos (HMTL/pdf/word)</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Markdown - HTML</h2></hgroup><article  id="markdown---html">
+
+<img src='img/rmarkdown-html.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>Markdown - HTML</h2></hgroup><article  id="markdown---html-1">
+
+<img src='img/rmarkdown-html2.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>Knitr y Pandoc</h2></hgroup><article  id="knitr-y-pandoc">
+
+<ul>
+<li>Knitr: Mejora sobre Sweave. Renderizar reportes que a su vez corran código. Ejemplo de uso: publicaciones científicas - actualizar gráficos</li>
+<li>Pandoc: La navaja suiza para convertir documentos&#8230; markdown, reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft Word docx, LibreOffice ODT, EPUB</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>¿Cómo se escribe en formato rmarkdown (.Rmd)?</h2></hgroup><article  id="como-se-escribe-en-formato-rmarkdown-.rmd">
+
+<ul>
+<li>Yaml frontmatter</li>
+<li>Chunks</li>
+<li>Markdown normal</li>
+</ul>
+
+<img src='img/rmarkdown-rmd.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>Chunks</h2></hgroup><article  id="chunks">
+
+<p>Los chunks son conceptos que vienen del paquete knitr.<br/>Comienzan con tres <strong>back ticks</strong> y <code>{r }</code></p>
+
+<p><code>r   1 + 1</code></p>
+
+<p><code>## [1] 2</code> #&gt; [1] 2</p>
+
+<p>Tiene múltiples opciones dependiendo de lo que se quiera a la salida.</p>
+
+<p><code>echo, eval, message, warning, results, fig.width, fig.height...</code></p>
+
+<p>Ver opciones <a href='http://yihui.name/knitr/options/' title=''>http://yihui.name/knitr/options/</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Yaml front matter</h2></hgroup><article  id="yaml-front-matter">
+
+<p>Lo que va al comienzo del archivo <code>.Rmd</code> Se pueden definir formatos y otras propiedades, incluso definir parámetros para automatizar reportes.</p>
+
+<pre >  ---
+  title: &quot;Hola, soy Rmarkdown&quot;
+  date: &quot;2016-02-17&quot;
+  output: html_document
+  ---</pre>
+
+</article></slide><slide class=''><hgroup><h2>¿Resultado?</h2></hgroup><article  id="resultado">
+
+<img src='img/rmarkdown-result.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>¿Cómo se compila?</h2></hgroup><article  id="como-se-compila">
+
+<img src='img/rmarkdown-button.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>¿Cómo se compila sin ayuda de Rstudio?</h2></hgroup><article  id="como-se-compila-sin-ayuda-de-rstudio">
+
+<pre class = 'prettyprint lang-r'>library(rmarkdown)
+render(&quot;index.Rmd&quot;)
+browseURL(&quot;index.html&quot;)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Nuestro turno: Primero lo primero:</h2></hgroup><article  id="nuestro-turno-primero-lo-primero">
+
+<pre class = 'prettyprint lang-r'>install.packages(c(&quot;knitr&quot;, &quot;rmarkdown&quot;))</pre>
+
+</article></slide><slide class=''><hgroup><h2>Nuestro turno</h2></hgroup><article  id="nuestro-turno">
+
+<pre >  Title
+  ====================
+  
+  This is an R Markdown document.
+  
+  ```{{r results=&#39;asis&#39;}}
+  library(knitr)
+  kable(head(cars), &#39;html&#39;)
+  ```
+  
+  You can also embed plots, for example:
+  
+  ```{{r fig.width=7, fig.height=6, echo=FALSE}}
+  plot(cars)
+  ```</pre>
+
+</article></slide><slide class=''><hgroup><h2>¿Qué más? Tablas interactivas</h2></hgroup><article  id="que-mas-tablas-interactivas">
+
+<img src='img/rmarkdown-interactive-tables.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2>¿Qué más? Gráficos interactivas</h2></hgroup><article  id="que-mas-graficos-interactivas">
+
+<img src='img/rmarkdown-interactive-graphs.png' title=''/>
+
+<pre >  library(plotly)
+  p &lt;- ggplot(data = d, aes(x = carat, y = price, colour = clarity)) +
+    geom_point(aes(text = cut), size = 3) + geom_smooth() + facet_wrap(~ clarity)
+  ggplotly(p)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Otros ejemplos</h2></hgroup><article  id="otros-ejemplos">
+
+<ul>
+<li><p>Estilo Tufte: <a href='http://cran.r-project.org/web/packages/tufterhandout/vignettes/example.html' title=''>HTML</a>, <a href='http://rmarkdown.rstudio.com/examples/tufte-handout.pdf' title=''>pdf</a> documents.</p></li>
+<li><p>Kmeans <a href='https://rpubs.com/dnchari/kmeans' title=''>https://rpubs.com/dnchari/kmeans</a></p></li>
+<li><p>Mapas y proyecciones <a href='https://rpubs.com/hrbrmstr/coord_proj_stress_test' title=''>https://rpubs.com/hrbrmstr/coord_proj_stress_test</a></p></li>
+<li><p>Htmlwidgets de Redes <a href='https://rpubs.com/yoshio/99778' title=''>https://rpubs.com/yoshio/99778</a></p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Rmarkdown avanzado</h2></hgroup><article  id="rmarkdown-avanzado">
+
+<ul>
+<li><p>Opciones globales <code>knitr::opts_chunk$set(message = FALSE, warning = FALSE)</code></p></li>
+<li><p>Pasar parámetros <a href='http://rmarkdown.rstudio.com/developer_parameterized_reports.html' title=''>http://rmarkdown.rstudio.com/developer_parameterized_reports.html</a></p>
+
+<pre >  params:
+start: !r as.Date(&quot;2015-01-01&quot;)
+snapshot: !r as.POSIXct(&quot;2015-01-01 12:30:00&quot;)</pre></li>
+<li>Documentos reactivos (embber shiny)</li>
+<li><p>Cambiar el template de html</p></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Otros recursos</h2></hgroup><article  id="otros-recursos">
+
+<ul>
+<li><a href='https://github.com/cpsievert/slides' title=''>https://github.com/cpsievert/slides</a></li>
+<li><a href='http://rmarkdown.rstudio.com' title=''>http://rmarkdown.rstudio.com</a></li>
+<li><a href='http://www.rstudio.com/ide/docs/authoring/using_markdown' title=''>http://www.rstudio.com/ide/docs/authoring/using_markdown</a></li>
+<li><a href='http://yihui.name/knitr/' title=''>http://yihui.name/knitr/</a></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Gracias!</h2></hgroup><article  id="gracias">
+
+<p>No olvidar</p>
+
+<pre >sessionInfo()</pre>
+
+<p>O mejor</p>
+
+<pre >devtools::session_info()</pre></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="libs/ioslides-13.5.1/js/hammer.js"></script>
+<script src="libs/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="libs/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -18,7 +18,7 @@ _"Y este error qué? Antes no salia!"_
 
 _"El termino investigación reproducible (_reproducible research_) se refiere a la idea de que el producto final de una investigación ~~academica~~ es el artículo en conjunto con todo el ambiente computacional usado para producir los reseltudas en el articulo como el codigo, los datos, etc. que pueden ser usados para **reproducir** los resultados y crear nuevo trabajo basado en la investigación."_
 
-Ver por ejemplo [WaveLab and Reproducible Research](https://statistics.stanford.edu/sites/default/files/EFS%20NSF%20474.pdf) en particular las anecdotas en la sección 2.
+Ver por ejemplo [_WaveLab and Reproducible Research_](https://statistics.stanford.edu/sites/default/files/EFS%20NSF%20474.pdf) en particular las anecdotas en la sección 2.
 
 ## Que es _reproducible research_?
 
@@ -36,7 +36,7 @@ _Reproducibilidad es la capacidad de un **experimento** o **estudio**  de ser du
 >- Por la ciencia y su desarrollo.
 >- Para fomentar la transparencia.
 
-## Sobrevuelo historico | Raices
+## Sobrevuelo histórico | Raices
 
 - Stanford:
     - [Donald Knuth](http://cs.stanford.edu/~uno/) y la idea de [_Literate programming_](https://en.wikipedia.org/wiki/Literate_programming): http://www.literateprogramming.com/
@@ -49,11 +49,11 @@ _Reproducibilidad es la capacidad de un **experimento** o **estudio**  de ser du
 
 Mucho más en: http://reproducibleresearch.net/links/
 
-## Sobrevuelo historico:
+## Sobrevuelo histórico
 
 [![WEB](reproducible-research_files/WEB.png)](http://www.literateprogramming.com/knuthweb.pdf "WEB")
 
-## Sobrevuelo historico | Sweave
+## Sobrevuelo histórico | Sweave
 
 [Sweave](http://www.statistik.lmu.de/~leisch/Sweave/) por [Friedrich Leisch](http://www.statistik.lmu.de/~leisch/) sintaxis de `noweb` con $\LaTeX$ + S (i.e. R)
 
@@ -61,17 +61,17 @@ Mucho más en: http://reproducibleresearch.net/links/
 help("Sweave", package="utils") 
 ```
 
-## Sobrevuelo historico
+## Sobrevuelo histórico
 
 <div class="centered">
 [![Sweve](reproducible-research_files/Sweave.png)](http://www.statistik.lmu.de/~leisch/Sweave/Sweave-manual.pdf "WEB")
 </div>
 
-## Sobrevuelo historico | knitr
+## Sobrevuelo histórico | knitr
 
 [knitr](http://yihui.name/knitr/): _a [neater](https://github.com/yihui/knitr#motivation) versión of Sweave_
 
-## Sobrevuelo historico | rmarkdown
+## Sobrevuelo histórico | rmarkdown
 
 Documentos dinamicos con R:
 
@@ -81,9 +81,17 @@ Documentos dinamicos con R:
 [![Rmarkdown](http://rmarkdown.rstudio.com/images/RMarkdownOutputFormats.png)](http://rmarkdown.rstudio.com/ "WEB")
 </div>
 
-## Sobrevuelo historico | Jupyter (antes iPython) 
+## Sobrevuelo histórico | Jupyter (antes iPython) 
 
-## Algunas herramientas y flujos de trabajo
+[Jupyter](http://jupyter.org/) (antes [iPython](http://ipython.org/)): computacioón interactiva independiente del lenguaje - [_kernels_](https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages). ([Como instalar](http://jupyter.readthedocs.org/en/latest/install.html#install))
+
+Jupyter con Python y su _stack_ para computo cientifico [SciPy](http://www.scipy.org/) / [Anaconda](https://www.continuum.io/why-anaconda) han desarrollado un ambiente muy valioso para analisis de datos abierto: e.g. [Google deep-dream](https://github.com/google/deepdream/blob/master/dream.ipynb)
+
+[iRkernel](irkernel.github.io) - _kernel_ de R para Jupyter.
+
+
+
+## Algunas herramientas y flujos de trabajo | Investigación reproducible es mucho más
 
 Pero hacer _reproducible research_ bueno o util requiere más que entrelazar prosa y codigo.
 
@@ -95,21 +103,18 @@ Niveles de calidad:
 - Sirve el codigo con otros datos?
 - Se puede extender el codigo para hacer otras cosas?
 
-## Algunas herramientas y flujos de trabajo
+## Algunas herramientas y flujos de trabajo | [Recomendaciones generales](http://kbroman.org/steps2rr/) {.left-margin}
 
-[Recomendaciones generales](http://kbroman.org/steps2rr/):
+>- Todo programado
+>- Organizar datos y codigos - [definir una estructura](http://stats.stackexchange.com/a/3191) (e.g. [LCFD](http://stackoverflow.com/a/1434424), [ProjectTemplate](projecttemplate.net), [Paquetes](http://stackoverflow.com/a/1266400) [no es tan dificil](http://r-pkgs.had.co.nz))) y [una](http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html#coding-style) [guia](https://google.github.io/styleguide/Rguide.xml) [de estilo](http://adv-r.had.co.nz/Style.html)
+>- Automatizar los procesos ([GNU Make]())
+>- Reportes reproducibles - _literate **analysis** + programming_
+>- _No repetirse_: encapsular codigo reutilizable en funciones (documentando _literate programing_!).
 
-1. Todo programado
-2. [Organizar datos y codigos - definir una estructura](http://stats.stackexchange.com/a/3191) (e.g. [LCFD](http://stackoverflow.com/a/1434424), [ProjectTemplate](projecttemplate.net), [Paquetes](http://stackoverflow.com/a/1266400) [no es tan dificil](http://r-pkgs.had.co.nz)))
-3. Automatizar los procesos ([GNU Make]())
-4. Reportes reproducibles - _literate **analysis** + programming_
-5. _No repetirse_: encapsular codigo reutilizable en funciones (documentando _literate programing_).
-6. Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).
-7. Sistemas de control de version ([git]() + [GitHub]()/[bitbucket]())
-8. Portabilidad: manejo de dependencias / ambientes virtuales (e.g. [packrat]())
-9. Validez del codigo: pruebas [testthat]()
+## Algunas herramientas y flujos de trabajo | [Recomendaciones generales](http://kbroman.org/steps2rr/) {.left-margin}
 
-http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html
 
-- Python _stack_ SciPy o Anaconda + Jupyter
-http://pythonhosted.org/Sumatra/
+>- Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).
+>- Sistemas de control de version ([git](https://git-scm.com/) + [GitHub](https://github.com/)/[bitbucket](https://bitbucket.org/)) - el problema del [_not Final doc_](http://www.phdcomics.com/comics/archive.php?comicid=1531) 
+>- Portabilidad: manejo de dependencias / ambientes virtuales (e.g. [packrat](https://rstudio.github.io/packrat/), [Docker](https://www.docker.com/) + [rocker](https://github.com/rocker-org/rocker))
+>- Validez del codigo (y de los datos!): pruebas [testthat](https://github.com/hadley/testthat) y [testdat](https://github.com/ropensci/testdat). Ver [_testing for data science_](slides.com/treycausey/pydata2015) con Python.

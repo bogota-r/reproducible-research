@@ -20,3 +20,13 @@ knitr::opts_chunk$set(message = FALSE, comment = "#>")
 
 ```{r knitr-rmd, child = "knitr-rmarkdown.rmd"}
 ```
+
+## Colofón {.smaller .left-margin}
+
+### [**bogota-r.github.io/reproducible-research**](http://bogota-r.github.io/reproducible-research)
+
+Esta presentación fue escrita en [RMarkdown](http://rmarkdown.rstudio.com/) desde [RStudio](https://www.rstudio.com/) y compilada por `rmarkdown` en la plantilla [`ioslides`](https://code.google.com/archive/p/io-2012-slides/) de Google gracias a [`knitr`](http://yihui.name/knitr/) y [`pandoc`](http://pandoc.org/). Publicada en la web en [GitHub](https://github.com/bogota-r/intro) gracias a [GitHub Pages](https://pages.github.com/).
+
+La presentación fue preparada por por [Daniel Moreno](https://github.com/demorenoc) y [Juan Pablo Marin](https://github.com/jpmarindiaz) para el [Grupo de Usuarios de R de Bogotá](http://www.meetup.com/Bogota-R-Users-Group/) y el contenido original esta bajo la licensia [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/).
+
+[![CC BY](http://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/ "WEB")

@@ -101,20 +101,139 @@
           </hgroup>
   </slide>
 
-<slide class=''><hgroup><h2><em>Outline</em></h2></hgroup><article  id="outline">
+<slide class=''><hgroup><h2>De que vamos a hablar:</h2></hgroup><article  id="de-que-vamos-a-hablar">
 
-<ul class = 'build'>
+<ol>
+<li>Intro:
+
+<ul>
 <li>Que es <em>reproducible research</em> y para que?</li>
 <li>Sobrevuelo historico</li>
+<li>Algunas herramientas y flujos de trabajo</li>
+</ul></li>
 <li><strong>knitr y rmarkdown</strong></li>
-<li>Otras herramientas</li>
+</ol>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Intro</h2></hgroup><article  id="intro">
+
+</article></slide><slide class=''><hgroup><h2>Que es <em>reproducible research</em>?</h2></hgroup><article  id="que-es-reproducible-research" class="build">
+
+<p><em>&quot;Creo que metimos los datos que no eran!&quot;</em></p>
+
+<p><em>&quot;Como es que generamos esta gráfica?&quot;</em></p>
+
+<p><em>&quot;De donde vienen esos datos? Creo que toca actualizarlos!&quot;</em></p>
+
+<p><em>&quot;Y este error qué? Antes no salia!&quot;</em></p>
+
+<p><a href='https://www.biostat.wisc.edu/~kbroman/presentations/repro_research_RDS2015.pdf' title=''>Basdo en notas de Karl Broman</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Que es <em>reproducible research</em>?</h2></hgroup><article  id="que-es-reproducible-research-1">
+
+<p><a href='https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research' title=''>De wikipedia (en inglés)</a>:</p>
+
+<p><em>&quot;El termino investigación reproducible (<em>reproducible research</em>) se refiere a la idea de que el producto final de una investigación <del>academica</del> es el artículo en conjunto con todo el ambiente computacional usado para producir los reseltudas en el articulo como el codigo, los datos, etc. que pueden ser usados para <strong>reproducir</strong> los resultados y crear nuevo trabajo basado en la investigación.&quot;</em></p>
+
+<p>Ver por ejemplo <a href='https://statistics.stanford.edu/sites/default/files/EFS%20NSF%20474.pdf' title=''>WaveLab and Reproducible Research</a> en particular las anecdotas en la sección 2.</p>
+
+</article></slide><slide class=''><hgroup><h2>Que es <em>reproducible research</em>?</h2></hgroup><article  id="que-es-reproducible-research-2">
+
+<p>Rproducibilidad vs replicabilidad.</p>
+
+<p>Reproducible vs valido.</p>
+
+<p><a href='https://en.wikipedia.org/wiki/Reproducibility' title=''>De wikipedia (en inglés)</a>: <em>Reproducibilidad es la capacidad de un <strong>experimento</strong> o <strong>estudio</strong> de ser duplicado. &#8230; Hablamos de <strong>replicar</strong> un experimento cuando este se reproduce. La reproducibilidad es uno de los principios fundamentales del metodo cientifico.</em></p>
+
+</article></slide><slide class=''><hgroup><h2>Por qué <em>reproducible research</em>?</h2></hgroup><article  id="por-que-reproducible-research">
+
+<ul class = 'build'>
+<li>Para colaborar.</li>
+<li>Por uno mismo!</li>
+<li>Por la ciencia y su desarrollo.</li>
+<li>Para fomentar la transparencia.</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Prueba</h2></hgroup><article  id="prueba">
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico </h2><h3> Raices</h3></hgroup><article  id="sobrevuelo-historico-raices">
 
-<pre class = 'prettyprint lang-r'>plot(sin, -pi, 2*pi)</pre>
+<ul>
+<li>Stanford:
 
-<p><img src="reproducible-research_files/figure-html/prueba-1.png" title="" alt="" width="720" /></p>
+<ul>
+<li><a href='http://cs.stanford.edu/~uno/' title=''>Donald Knuth</a> y la idea de <a href='https://en.wikipedia.org/wiki/Literate_programming' title=''><em>Literate programming</em></a>: <a href='http://www.literateprogramming.com/' title=''>http://www.literateprogramming.com/</a></li>
+<li><a href='http://sepwww.stanford.edu/doku.php?id=sep:research:reproducible' title=''><em>Stanford Exploration Project</em></a></li>
+<li><a href='http://statweb.stanford.edu/~wavelab/' title=''>WaveLab</a></li>
+</ul></li>
+<li><p><a href='http://www.literateprogramming.com/knuthweb.pdf' title=''><code>WEB</code></a> la primera implementación de <em>literate programming</em>: \(\TeX\) + PASCAL.</p></li>
+<li><p><a href='https://www.cs.tufts.edu/~nr/noweb/' title=''><code>noweb</code></a> por <a href='http://www.cs.tufts.edu/~nr/' title=''>Norman Ramsey</a> <em>literate programming</em> simple, extensible, independiente de lenguajes.</p></li>
+</ul>
+
+<p>Mucho más en: <a href='http://reproducibleresearch.net/links/' title=''>http://reproducibleresearch.net/links/</a></p>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico:</h2></hgroup><article  id="sobrevuelo-historico">
+
+<p><a href='http://www.literateprogramming.com/knuthweb.pdf' title='WEB'><img src='reproducible-research_files/WEB.png' title=''/></a></p>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico </h2><h3> Sweave</h3></hgroup><article  id="sobrevuelo-historico-sweave">
+
+<p><a href='http://www.statistik.lmu.de/~leisch/Sweave/' title=''>Sweave</a> por <a href='http://www.statistik.lmu.de/~leisch/' title=''>Friedrich Leisch</a> sintaxis de <code>noweb</code> con \(\LaTeX\) + S (i.e. R)</p>
+
+<pre class = 'prettyprint lang-r'>help(&quot;Sweave&quot;, package=&quot;utils&quot;) </pre>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico</h2></hgroup><article  id="sobrevuelo-historico-1">
+
+<div class="centered">
+<p><a href='http://www.statistik.lmu.de/~leisch/Sweave/Sweave-manual.pdf' title='WEB'><img src='reproducible-research_files/Sweave.png' title=''/></a></p></div>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico </h2><h3> knitr</h3></hgroup><article  id="sobrevuelo-historico-knitr">
+
+<p><a href='http://yihui.name/knitr/' title=''>knitr</a>: <em>a <a href='https://github.com/yihui/knitr#motivation' title=''>neater</a> versión of Sweave</em></p>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico </h2><h3> rmarkdown</h3></hgroup><article  id="sobrevuelo-historico-rmarkdown">
+
+<p>Documentos dinamicos con R:</p>
+
+<p><a href='http://rmarkdown.rstudio.com/' title=''>RMarkdown</a> = knitr con <a href='https://daringfireball.net/projects/markdown/' title=''>markdown</a> + <a href='http://pandoc.org/' title=''>pandoc</a> =</p>
+
+<div class="centered">
+<p><a href='http://rmarkdown.rstudio.com/' title='WEB'><img src='http://rmarkdown.rstudio.com/images/RMarkdownOutputFormats.png' title=''/></a></p></div>
+
+</article></slide><slide class=''><hgroup><h2>Sobrevuelo historico </h2><h3> Jupyter (antes iPython)</h3></hgroup><article  id="sobrevuelo-historico-jupyter-antes-ipython">
+
+</article></slide><slide class=''><hgroup><h2>Algunas herramientas y flujos de trabajo</h2></hgroup><article  id="algunas-herramientas-y-flujos-de-trabajo">
+
+<p>Pero hacer <em>reproducible research</em> bueno o util requiere más que entrelazar prosa y codigo.</p>
+
+<p>Niveles de calidad:</p>
+
+<ul>
+<li>Se pueden reproducir (regenerar) las tablas y graficas?</li>
+<li>Coincide el codigo con lo que dice la documentación?</li>
+<li>Se explica claramente por qué se hace lo que se hace? (e.g. selección de parametros)</li>
+<li>Sirve el codigo con otros datos?</li>
+<li>Se puede extender el codigo para hacer otras cosas?</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Algunas herramientas y flujos de trabajo</h2></hgroup><article  id="algunas-herramientas-y-flujos-de-trabajo-1">
+
+<p><a href='http://kbroman.org/steps2rr/' title=''>Recomendaciones generales</a>:</p>
+
+<ol>
+<li>Todo programado</li>
+<li><a href='http://stats.stackexchange.com/a/3191' title=''>Organizar datos y codigos - definir una estructura</a> (e.g. <a href='http://stackoverflow.com/a/1434424' title=''>LCFD</a>, <a href='projecttemplate.net' title=''>ProjectTemplate</a>, <a href='http://stackoverflow.com/a/1266400' title=''>Paquetes</a> <a href='http://r-pkgs.had.co.nz' title=''>no es tan dificil</a>))</li>
+<li>Automatizar los procesos (<a href='' title=''>GNU Make</a>)</li>
+<li>Reportes reproducibles - <em>literate <strong>analysis</strong> + programming</em></li>
+<li><em>No repetirse</em>: encapsular codigo reutilizable en funciones (documentando <em>literate programing</em>).</li>
+<li>Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).</li>
+<li>Sistemas de control de version (<a href='' title=''>git</a> + <a href='' title=''>GitHub</a>/<a href='' title=''>bitbucket</a>)</li>
+<li>Portabilidad: manejo de dependencias / ambientes virtuales (e.g. <a href='' title=''>packrat</a>)</li>
+<li>Validez del codigo: pruebas <a href='' title=''>testthat</a></li>
+</ol>
+
+<p><a href='http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html' title=''>http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html</a></p>
+
+<ul>
+<li>Python <em>stack</em> SciPy o Anaconda + Jupyter <a href='http://pythonhosted.org/Sumatra/' title=''>http://pythonhosted.org/Sumatra/</a></li>
+</ul>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>knitr &amp; rmarkdown</h2></hgroup><article  id="knitr-rmarkdown">
 

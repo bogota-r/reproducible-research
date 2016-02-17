@@ -6,6 +6,15 @@ title: "Investigación reproducible con R"
 knitr::opts_chunk$set(message = FALSE, comment = "#>")
 ```
 
+## De que vamos a hablar:
+
+1. Intro: 
+    - Que es _reproducible research_ y para que?
+    - Sobrevuelo historico
+    - Algunas herramientas y flujos de trabajo
+
+1. **knitr y rmarkdown**
+
 ```{r intro, child = "intro.rmd"}
 ```
 

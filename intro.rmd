@@ -1,12 +1,115 @@
-## _Outline_
+# Intro
 
-- Que es _reproducible research_ y para que?
-- Sobrevuelo historico
-- **knitr y rmarkdown**
-- Otras herramientas
+## Que es _reproducible research_? {.build}
 
-## Prueba
+_"Creo que metimos los datos que no eran!"_
 
-```{r prueba}
-plot(sin, -pi, 2*pi)
+_"Como es que generamos esta gráfica?"_
+
+_"De donde vienen esos datos? Creo que toca actualizarlos!"_
+
+_"Y este error qué? Antes no salia!"_
+
+[Basdo en notas de Karl Broman](https://www.biostat.wisc.edu/~kbroman/presentations/repro_research_RDS2015.pdf)
+
+## Que es _reproducible research_?
+
+[De wikipedia (en inglés)](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research):
+
+_"El termino investigación reproducible (_reproducible research_) se refiere a la idea de que el producto final de una investigación ~~academica~~ es el artículo en conjunto con todo el ambiente computacional usado para producir los reseltudas en el articulo como el codigo, los datos, etc. que pueden ser usados para **reproducir** los resultados y crear nuevo trabajo basado en la investigación."_
+
+Ver por ejemplo [WaveLab and Reproducible Research](https://statistics.stanford.edu/sites/default/files/EFS%20NSF%20474.pdf) en particular las anecdotas en la sección 2.
+
+## Que es _reproducible research_?
+
+Rproducibilidad vs replicabilidad.
+
+Reproducible vs valido.
+
+[De wikipedia (en inglés)](https://en.wikipedia.org/wiki/Reproducibility):
+_Reproducibilidad es la capacidad de un **experimento** o **estudio**  de ser duplicado. ... Hablamos de **replicar** un experimento cuando este se reproduce. La reproducibilidad es uno de los principios fundamentales del metodo cientifico._
+
+## Por qué _reproducible research_?
+
+>- Para colaborar.
+>- Por uno mismo!
+>- Por la ciencia y su desarrollo.
+>- Para fomentar la transparencia.
+
+## Sobrevuelo historico | Raices
+
+- Stanford:
+    - [Donald Knuth](http://cs.stanford.edu/~uno/) y la idea de [_Literate programming_](https://en.wikipedia.org/wiki/Literate_programming): http://www.literateprogramming.com/
+    - [_Stanford Exploration Project_](http://sepwww.stanford.edu/doku.php?id=sep:research:reproducible)
+    - [WaveLab](http://statweb.stanford.edu/~wavelab/)
+
+- [`WEB`](http://www.literateprogramming.com/knuthweb.pdf) la primera implementación de _literate programming_: $\TeX$ + PASCAL.
+
+- [`noweb`](https://www.cs.tufts.edu/~nr/noweb/) por [Norman Ramsey](http://www.cs.tufts.edu/~nr/)  _literate programming_ simple, extensible, independiente de lenguajes.
+
+Mucho más en: http://reproducibleresearch.net/links/
+
+## Sobrevuelo historico:
+
+[![WEB](reproducible-research_files/WEB.png)](http://www.literateprogramming.com/knuthweb.pdf "WEB")
+
+## Sobrevuelo historico | Sweave
+
+[Sweave](http://www.statistik.lmu.de/~leisch/Sweave/) por [Friedrich Leisch](http://www.statistik.lmu.de/~leisch/) sintaxis de `noweb` con $\LaTeX$ + S (i.e. R)
+
+```r
+help("Sweave", package="utils") 
 ```
+
+## Sobrevuelo historico
+
+<div class="centered">
+[![Sweve](reproducible-research_files/Sweave.png)](http://www.statistik.lmu.de/~leisch/Sweave/Sweave-manual.pdf "WEB")
+</div>
+
+## Sobrevuelo historico | knitr
+
+[knitr](http://yihui.name/knitr/): _a [neater](https://github.com/yihui/knitr#motivation) versión of Sweave_
+
+## Sobrevuelo historico | rmarkdown
+
+Documentos dinamicos con R:
+
+[RMarkdown](http://rmarkdown.rstudio.com/) = knitr con [markdown](https://daringfireball.net/projects/markdown/) + [pandoc](http://pandoc.org/) =
+
+<div class="centered">
+[![Rmarkdown](http://rmarkdown.rstudio.com/images/RMarkdownOutputFormats.png)](http://rmarkdown.rstudio.com/ "WEB")
+</div>
+
+## Sobrevuelo historico | Jupyter (antes iPython) 
+
+## Algunas herramientas y flujos de trabajo
+
+Pero hacer _reproducible research_ bueno o util requiere más que entrelazar prosa y codigo.
+
+Niveles de calidad:
+
+- Se pueden reproducir (regenerar) las tablas y graficas?
+- Coincide el codigo con lo que dice la documentación?
+- Se explica claramente por qué se hace lo que se hace? (e.g. selección de parametros)
+- Sirve el codigo con otros datos?
+- Se puede extender el codigo para hacer otras cosas?
+
+## Algunas herramientas y flujos de trabajo
+
+[Recomendaciones generales](http://kbroman.org/steps2rr/):
+
+1. Todo programado
+2. [Organizar datos y codigos - definir una estructura](http://stats.stackexchange.com/a/3191) (e.g. [LCFD](http://stackoverflow.com/a/1434424), [ProjectTemplate](projecttemplate.net), [Paquetes](http://stackoverflow.com/a/1266400) [no es tan dificil](http://r-pkgs.had.co.nz)))
+3. Automatizar los procesos ([GNU Make]())
+4. Reportes reproducibles - _literate **analysis** + programming_
+5. _No repetirse_: encapsular codigo reutilizable en funciones (documentando _literate programing_).
+6. Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).
+7. Sistemas de control de version ([git]() + [GitHub]()/[bitbucket]())
+8. Portabilidad: manejo de dependencias / ambientes virtuales (e.g. [packrat]())
+9. Validez del codigo: pruebas [testthat]()
+
+http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html
+
+- Python _stack_ SciPy o Anaconda + Jupyter
+http://pythonhosted.org/Sumatra/

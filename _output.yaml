@@ -2,6 +2,6 @@ ioslides_presentation:
   widescreen: true
   self_contained: false
   lib_dir: libs
-  incremental: yes
-  logo: "r-intro_files/logo.png"
+  incremental: no
+  logo: "reproducible-research_files/logo.png"
   css: styles.css

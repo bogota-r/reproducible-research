@@ -1,26 +1,6 @@
-a[title="CC-BY-4.0"] {
+a[title="WEB"] {
 	text-decoration: none;
 	border: 0 none;
-}
-
-.videowrapper {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    clear: both;
-    width: 90%;
-    position: relative;
-    padding-bottom: 90%;
-    padding-top: 25px;
-    height: 0;
-}
-
-.videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 72%;
-    height: 40%;
 }
 
 .left-margin {

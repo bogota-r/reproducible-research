@@ -151,9 +151,9 @@ install.packages(c("knitr", "rmarkdown"))
     start: !r as.Date("2015-01-01")
     snapshot: !r as.POSIXct("2015-01-01 12:30:00")
 ```
-- Documentos reactivos (embber shiny)
-- Cambiar el template de html
+- Documentos reactivos (embeber shiny): http://rmarkdown.rstudio.com/authoring_shiny.html)
 
+- Cambiar el template de html: http://rmarkdown.rstudio.com/developer_document_templates.html
 
 
 ## Otros recursos

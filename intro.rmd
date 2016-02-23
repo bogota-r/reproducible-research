@@ -106,15 +106,15 @@ Niveles de calidad:
 ## Algunas herramientas y flujos de trabajo | [Recomendaciones generales](http://kbroman.org/steps2rr/) {.left-margin}
 
 >- Todo programado
->- Organizar datos y codigos - [definir una estructura](http://stats.stackexchange.com/a/3191) (e.g. [LCFD](http://stackoverflow.com/a/1434424), [ProjectTemplate](projecttemplate.net), [Paquetes](http://stackoverflow.com/a/1266400) [no es tan dificil](http://r-pkgs.had.co.nz))) y [una](http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html#coding-style) [guia](https://google.github.io/styleguide/Rguide.xml) [de estilo](http://adv-r.had.co.nz/Style.html)
->- Automatizar los procesos ([GNU Make]())
->- Reportes reproducibles - _literate **analysis** + programming_
->- _No repetirse_: encapsular codigo reutilizable en funciones (documentando _literate programing_!).
+>- Organizar datos y codigos - [definir una estructura](http://stats.stackexchange.com/a/3191) (e.g. [LCFD](http://stackoverflow.com/a/1434424), [ProjectTemplate](http://projecttemplate.net), [Paquetes](http://stackoverflow.com/a/1266400) [no es tan dificil](http://r-pkgs.had.co.nz))) y [una](http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html#coding-style) [guia](https://google.github.io/styleguide/Rguide.xml) [de estilo](http://adv-r.had.co.nz/Style.html)
+>- Automatizar los procesos ([GNU Make](https://www.gnu.org/software/make/))
+>- Reportes reproducibles - _literate **analysis** + programming_ (rmarkdown!)
+>- _No repetirse_: encapsular codigo reutilizable en funciones.
 
 ## Algunas herramientas y flujos de trabajo | [Recomendaciones generales](http://kbroman.org/steps2rr/) {.left-margin}
 
 
->- Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).
+>- Encapsular las funciones en paquetes/modulos (documentando _literate programing_ con [roxygen2](https://cran.r-project.org/web/packages/roxygen2/)!) - (extensibilidad y portabilidad).
 >- Sistemas de control de version ([git](https://git-scm.com/) + [GitHub](https://github.com/)/[bitbucket](https://bitbucket.org/)) - el problema del [_not Final doc_](http://www.phdcomics.com/comics/archive.php?comicid=1531) 
 >- Portabilidad: manejo de dependencias / ambientes virtuales (e.g. [packrat](https://rstudio.github.io/packrat/), [Docker](https://www.docker.com/) + [rocker](https://github.com/rocker-org/rocker))
->- Validez del codigo (y de los datos!): pruebas [testthat](https://github.com/hadley/testthat) y [testdat](https://github.com/ropensci/testdat). Ver [_testing for data science_](slides.com/treycausey/pydata2015) con Python.
+>- Validez del codigo (y de los datos!): pruebas [testthat](https://github.com/hadley/testthat) y [testdat](https://github.com/ropensci/testdat). Ver [_testing for data science_](https://slides.com/treycausey/pydata2015) con Python.

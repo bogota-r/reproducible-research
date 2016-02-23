@@ -223,19 +223,19 @@
 
 <ul class = 'build'>
 <li>Todo programado</li>
-<li>Organizar datos y codigos - <a href='http://stats.stackexchange.com/a/3191' title=''>definir una estructura</a> (e.g. <a href='http://stackoverflow.com/a/1434424' title=''>LCFD</a>, <a href='projecttemplate.net' title=''>ProjectTemplate</a>, <a href='http://stackoverflow.com/a/1266400' title=''>Paquetes</a> <a href='http://r-pkgs.had.co.nz' title=''>no es tan dificil</a>)) y <a href='http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html#coding-style' title=''>una</a> <a href='https://google.github.io/styleguide/Rguide.xml' title=''>guia</a> <a href='http://adv-r.had.co.nz/Style.html' title=''>de estilo</a></li>
-<li>Automatizar los procesos (<a href='' title=''>GNU Make</a>)</li>
-<li>Reportes reproducibles - <em>literate <strong>analysis</strong> + programming</em></li>
-<li><em>No repetirse</em>: encapsular codigo reutilizable en funciones (documentando <em>literate programing</em>!).</li>
+<li>Organizar datos y codigos - <a href='http://stats.stackexchange.com/a/3191' title=''>definir una estructura</a> (e.g. <a href='http://stackoverflow.com/a/1434424' title=''>LCFD</a>, <a href='http://projecttemplate.net' title=''>ProjectTemplate</a>, <a href='http://stackoverflow.com/a/1266400' title=''>Paquetes</a> <a href='http://r-pkgs.had.co.nz' title=''>no es tan dificil</a>)) y <a href='http://www.stat.ubc.ca/~jenny/STAT545A/block19_codeFormattingOrganization.html#coding-style' title=''>una</a> <a href='https://google.github.io/styleguide/Rguide.xml' title=''>guia</a> <a href='http://adv-r.had.co.nz/Style.html' title=''>de estilo</a></li>
+<li>Automatizar los procesos (<a href='https://www.gnu.org/software/make/' title=''>GNU Make</a>)</li>
+<li>Reportes reproducibles - <em>literate <strong>analysis</strong> + programming</em> (rmarkdown!)</li>
+<li><em>No repetirse</em>: encapsular codigo reutilizable en funciones.</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Algunas herramientas y flujos de trabajo </h2><h3> <a href='http://kbroman.org/steps2rr/' title=''>Recomendaciones generales</a></h3></hgroup><article  id="algunas-herramientas-y-flujos-de-trabajo-recomendaciones-generales-1" class="left-margin">
 
 <ul class = 'build'>
-<li>Encapsular las funciones en paquetes/modulos - (extensibilidad y portabilidad).</li>
+<li>Encapsular las funciones en paquetes/modulos (documentando <em>literate programing</em> con <a href='https://cran.r-project.org/web/packages/roxygen2/' title=''>roxygen2</a>!) - (extensibilidad y portabilidad).</li>
 <li>Sistemas de control de version (<a href='https://git-scm.com/' title=''>git</a> + <a href='https://github.com/' title=''>GitHub</a>/<a href='https://bitbucket.org/' title=''>bitbucket</a>) - el problema del <a href='http://www.phdcomics.com/comics/archive.php?comicid=1531' title=''><em>not Final doc</em></a></li>
 <li>Portabilidad: manejo de dependencias / ambientes virtuales (e.g. <a href='https://rstudio.github.io/packrat/' title=''>packrat</a>, <a href='https://www.docker.com/' title=''>Docker</a> + <a href='https://github.com/rocker-org/rocker' title=''>rocker</a>)</li>
-<li>Validez del codigo (y de los datos!): pruebas <a href='https://github.com/hadley/testthat' title=''>testthat</a> y <a href='https://github.com/ropensci/testdat' title=''>testdat</a>. Ver <a href='slides.com/treycausey/pydata2015' title=''><em>testing for data science</em></a> con Python.</li>
+<li>Validez del codigo (y de los datos!): pruebas <a href='https://github.com/hadley/testthat' title=''>testthat</a> y <a href='https://github.com/ropensci/testdat' title=''>testdat</a>. Ver <a href='https://slides.com/treycausey/pydata2015' title=''><em>testing for data science</em></a> con Python.</li>
 </ul>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>rmarkdown</h2></hgroup><article  id="rmarkdown">
@@ -381,8 +381,8 @@ browseURL(&quot;index.html&quot;)</pre>
 <pre >  params:
 start: !r as.Date(&quot;2015-01-01&quot;)
 snapshot: !r as.POSIXct(&quot;2015-01-01 12:30:00&quot;)</pre></li>
-<li>Documentos reactivos (embber shiny)</li>
-<li><p>Cambiar el template de html</p></li>
+<li><p>Documentos reactivos (embeber shiny): <a href='http://rmarkdown.rstudio.com/authoring_shiny.html' title=''>http://rmarkdown.rstudio.com/authoring_shiny.html</a>)</p></li>
+<li><p>Cambiar el template de html: <a href='http://rmarkdown.rstudio.com/developer_document_templates.html' title=''>http://rmarkdown.rstudio.com/developer_document_templates.html</a></p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Otros recursos</h2></hgroup><article  id="otros-recursos">
